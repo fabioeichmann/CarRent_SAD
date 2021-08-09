@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Carrent.CarManagment.Api
+namespace Carrent.CustomerManagement.Domain
 {
-    public class CarDto
+    public class PostCode
     {
     }
 }

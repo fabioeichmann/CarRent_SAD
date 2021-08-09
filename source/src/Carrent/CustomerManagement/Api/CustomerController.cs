@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Carrent.Controllers
+namespace Carrent.CustomerManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         // GET: api/<CarController>
         [HttpGet]
