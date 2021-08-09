@@ -8,4 +8,11 @@ namespace Carrent.CarManagement.Domain
     public class CarClass
     {
     }
+
+    public enum CarClassType
+    {
+        Luxury,
+        Medium,
+        Basic
+    }
 }

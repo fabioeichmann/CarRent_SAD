@@ -7,10 +7,12 @@ namespace Carrent.CarManagement.Domain
 {
     public interface ICarClassRepository
     {
-        CarClass GetById(int id);
-        IEnumerable<CarClass> GetAll();
-        bool Insert(CarClass carClassObject);
-        bool Delete(CarClass carClassObject);
+        List<CarClass> FindEntityById(Guid id);
+        List<CarClass> GetAllEntities();
+        void Insert(CarClass carEntity);
+        void Update(CarClass carEntity);
+        void Remove(CarClass carEntity);
+        void RemoveById(Guid id);
 
     }
 }

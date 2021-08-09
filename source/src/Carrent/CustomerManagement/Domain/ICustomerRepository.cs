@@ -7,7 +7,7 @@ namespace Carrent.CustomerManagement.Domain
 {
     interface ICustomerRepository
     {
-        Customer GetById(int id);
+        Customer GetById(Guid id);
         IEnumerable<Customer> GetAll();
         bool Insert(Customer customerObject);
         bool Delete(Customer customerObject);

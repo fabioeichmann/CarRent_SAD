@@ -7,7 +7,7 @@ namespace Carrent.CustomerManagement.Domain
 {
     interface IPostCodeRepository
     {
-        PostCode GetById(int id);
+        PostCode GetById(Guid id);
         IEnumerable<PostCode> GetAll();
         bool Insert(PostCode postCodeObject);
         bool Delete(PostCode postCodeObject);

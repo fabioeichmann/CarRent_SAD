@@ -8,22 +8,32 @@ namespace Carrent.CarManagement.Infrastructure
 {
     public class CarClassRepository : ICarClassRepository
     {
-        public bool Delete(CarClass carObject)
+        public List<CarClass> FindEntityById(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<CarClass> GetAll()
+        public List<CarClass> GetAllEntities()
         {
             throw new NotImplementedException();
         }
 
-        public CarClass GetById(int id)
+        public void Insert(CarClass carEntity)
         {
             throw new NotImplementedException();
         }
 
-        public bool Insert(CarClass carObject)
+        public void Remove(CarClass carEntity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(CarClass carEntity)
         {
             throw new NotImplementedException();
         }
