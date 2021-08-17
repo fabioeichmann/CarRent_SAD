@@ -43,7 +43,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"fabioeichmann_CarRent_SAD" /o:"fabioeichmann" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet restore ./
-          dotnet build --no-restore ./
-          dotnet test --no-build --collect:"XPlat Code Coverage" --verbosity normal ./ -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+          dotnet restore ./src
+          dotnet build --no-restore ./src
+          dotnet test --no-build --collect:"XPlat Code Coverage" --verbosity normal ./src -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
