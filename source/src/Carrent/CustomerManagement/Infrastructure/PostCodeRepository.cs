@@ -18,7 +18,7 @@ namespace Carrent.CustomerManagement.Infrastructure
             throw new NotImplementedException();
         }
 
-        public PostCode GetById(int id)
+        public PostCode GetById(Guid id)
         {
             throw new NotImplementedException();
         }

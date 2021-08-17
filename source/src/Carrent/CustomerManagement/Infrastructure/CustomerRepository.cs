@@ -18,7 +18,7 @@ namespace Carrent.CustomerManagement.Infrastructure
             throw new NotImplementedException();
         }
 
-        public Customer GetById(int id)
+        public Customer GetById(Guid id)
         {
             throw new NotImplementedException();
         }

@@ -7,6 +7,7 @@ namespace Carrent.CarManagement.Domain
 {
     public class CarClass
     {
+        public CarClassType Type { get; set; }
     }
 
     public enum CarClassType

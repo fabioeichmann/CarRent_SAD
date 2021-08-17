@@ -7,5 +7,6 @@ namespace Carrent.CarManagement.Domain
 {
     public class Car
     {
+        public CarClass Class { get; set; }
     }
 }
