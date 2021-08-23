@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Carrent.CarManagement.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Carrent.CarManagement.Domain
+namespace Carrent.CarManagement.Infrastructure
 {
     public interface ICarClassRepository
     {

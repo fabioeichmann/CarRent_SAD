@@ -15,4 +15,4 @@ namespace Carrent.Common.Application
         void Update(T entity);
     }
 }
-}
+

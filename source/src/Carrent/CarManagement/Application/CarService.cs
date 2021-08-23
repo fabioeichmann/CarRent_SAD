@@ -1,4 +1,5 @@
 ﻿using Carrent.CarManagement.Domain;
+using Carrent.CarManagement.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
