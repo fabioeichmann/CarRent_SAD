@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Carrent.CarManagement.Api;
+using Carrent.CarManagement.Model;
 using Carrent.CarManagement.Application;
 using Carrent.CarManagement.Domain;
 using Microsoft.AspNetCore.Mvc;
