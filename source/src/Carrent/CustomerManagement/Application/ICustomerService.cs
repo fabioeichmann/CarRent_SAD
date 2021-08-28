@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Carrent.Common.Application;
+using Carrent.CustomerManagement.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Carrent.CustomerManagement.Application
 {
-    interface ICustomerService
+    public interface ICustomerService : IService<Customer>
     {
     }
 }

@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Carrent.CustomerManagement.Application;
+using Carrent.CustomerManagement.Domain;
+using Carrent.CustomerManagement.Model;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,36 +16,81 @@ namespace Carrent.CustomerManagement.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        // GET: api/<CarController>
+
+        public readonly IMapper _mapper;
+        public readonly ICustomerService _customerService;
+        CustomerController(IMapper mapper, ICustomerService customerService)
+        {
+            _mapper = mapper;
+            _customerService = customerService;
+        }
+
+        // GET: api/<CustomerController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<CustomerDto> Get()
         {
-            return new string[] { "value1", "value2" };
+            var customer = _customerService.GetAll();
+            return customer.Select(customer => new CustomerDto()
+            {
+                Id = customer.Id,
+                Firstname = customer.Firstname,
+                Familyname = customer.Familyname,
+                Street = customer.Street,
+                HouseNumber = customer.HouseNumber
+            }).ToList();
         }
 
-        // GET api/<CarController>/5
+        // GET api/<CustomerController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public CustomerDto Get(Guid id)
         {
-            return "value";
+            var customer = _customerService.GetById(id);
+            return new CustomerDto()
+            {
+                Id = customer.Id,
+                Firstname = customer.Firstname,
+                Familyname = customer.Familyname,
+                Street = customer.Street,
+                HouseNumber = customer.HouseNumber,
+            };
         }
 
-        // POST api/<CarController>
+        // POST api/<CustomerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] CustomerDto customerDto)
         {
+            var customer = new Customer()
+            {
+                Id = Guid.NewGuid(),
+                Firstname = customerDto.Firstname,
+                Familyname = customerDto.Familyname,
+                Street = customerDto.Street,
+                HouseNumber = customerDto.HouseNumber
+            };
+
+            _customerService.Add(customer);
         }
 
-        // PUT api/<CarController>/5
+        // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(Guid id, [FromBody] CustomerDto customerDto)
         {
+            var customer = new Customer()
+            {
+                Id = id,
+                Firstname = customerDto.Firstname,
+                Familyname = customerDto.Familyname,
+                Street = customerDto.Street,
+                HouseNumber = customerDto.HouseNumber
+            };
+            _customerService.Update(customer);
         }
 
-        // DELETE api/<CarController>/5
+        // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
+            _customerService.DeleteById(id);
         }
     }
 }

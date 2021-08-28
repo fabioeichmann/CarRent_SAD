@@ -1,7 +1,15 @@
+using Carrent.CarManagement.Application;
+using Carrent.CarManagement.Infrastructure;
+using Carrent.CarManagement.Infrastructure.Context;
+using Carrent.CustomerManagement.Application;
+using Carrent.CustomerManagement.Infrastructure;
+using Carrent.ReservationManagement.Application;
+using Carrent.ReservationManagement.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +34,23 @@ namespace Carrent
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CarRentDbContext>(settings =>
+            {
+                settings.UseSqlServer(Configuration.GetConnectionString("dbConnection"));
+            });
+
+            services.AddTransient<ICarService, CarService>();
+            services.AddScoped<ICarRepository, CarRepository>();
+
+            services.AddTransient<ICarClassService, CarClassService>();
+            services.AddScoped<ICarClassRepository, CarClassRepository>();
+
+            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+            services.AddTransient<IReservationService, ReservationService>();
+            services.AddScoped<IReservationRepository, ReservationRepository>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

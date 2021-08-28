@@ -10,7 +10,7 @@ namespace Carrent.CarManagement.Application
     {
         List<Car> GetAllCars();
         List<Car> GetCarById(Guid id);
-        List<Car> GetCarByType(CarClassType type);
+        List<Car> GetCarByType(CarClass type);
         void Add(Car car);
         void Delete(Car car);
         void DeleteById(Guid id);

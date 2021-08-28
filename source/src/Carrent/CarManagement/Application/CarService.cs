@@ -41,9 +41,9 @@ namespace Carrent.CarManagement.Application
             return _repository.FindEntityById(id);
         }
 
-        public List<Car> GetCarByType(CarClassType type)
+        public List<Car> GetCarByType(CarClass type)
         {
-            return _repository.GetAllEntities().Where(e => e.Class.Type == type).ToList();
+            return _repository.GetAllEntities().Where(e => e.Type == type.Type).ToList();
         }
 
         public void Update(Car car)

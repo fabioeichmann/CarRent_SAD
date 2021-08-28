@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,13 +8,12 @@ namespace Carrent.CarManagement.Domain
 {
     public class CarClass
     {
-        public CarClassType Type { get; set; }
-    }
+        public Guid Id { get; set; }
 
-    public enum CarClassType
-    {
-        Luxury,
-        Medium,
-        Basic
+        [Required]
+        public string Type { get; set; }
+
+        [Required]
+        public decimal DailyPrice { get; set; }
     }
 }
