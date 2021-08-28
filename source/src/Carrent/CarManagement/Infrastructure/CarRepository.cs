@@ -1,4 +1,6 @@
 ﻿using Carrent.CarManagement.Domain;
+using Carrent.CarManagement.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,34 +10,49 @@ namespace Carrent.CarManagement.Infrastructure
 {
     public class CarRepository : ICarRepository
     {
-        public List<Car> FindEntityById(Guid id)
+
+        private readonly CarRentDbContext _dbContext;
+
+        public CarRepository(CarRentDbContext carRentDbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = carRentDbContext;
+        }
+
+        public Car FindEntityById(Guid id)
+        {
+            return _dbContext.Cars.Include(e => e.Class).Where(c => c.Id.Equals(id)).FirstOrDefault();
         }
 
         public List<Car> GetAllEntities()
         {
-            throw new NotImplementedException();
+            return _dbContext.Cars.Select(e => e).Include(e => e.Class).ToList();
         }
 
         public void Insert(Car carEntity)
         {
-            throw new NotImplementedException();
+            _dbContext.Cars.Add(carEntity);
+            _dbContext.SaveChanges();
         }
 
         public void Remove(Car carEntity)
         {
-            throw new NotImplementedException();
+            Remove(carEntity);
         }
 
         public void RemoveById(Guid id)
         {
-            throw new NotImplementedException();
+            var isNotNull = FindEntityById(id);
+            if (isNotNull != null)
+            {
+                _dbContext.Cars.Remove(isNotNull);
+                _dbContext.SaveChanges();
+            }
         }
 
         public void Update(Car carEntity)
         {
-            throw new NotImplementedException();
+            _dbContext.Update(carEntity);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Carrent.CarManagement.Infrastructure
 {
     public interface ICarRepository
     {
-        List<Car> FindEntityById(Guid id);
+        Car FindEntityById(Guid id);
         List<Car> GetAllEntities();
         void Insert(Car carEntity);
         void Update(Car carEntity);

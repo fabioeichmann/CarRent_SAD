@@ -16,10 +16,10 @@ namespace Carrent.CarManagement.Controllers
     [ApiController]
     public class CarController : ControllerBase
     {
-        private readonly IMapper _mapper;
+        private readonly ICarClassService _carClassService;
         private readonly ICarService _carService;
 
-        public CarController(IMapper mapper, ICarService carService)
+        public CarController(ICarService carService, ICarClassService carClassService)
         {
             _mapper = mapper;
             _carService = carService;
@@ -34,9 +34,10 @@ namespace Carrent.CarManagement.Controllers
 
         // GET api/<CarController>/5
         [HttpGet("{id}")]
-        public List<CarDto> Get(Guid id)
+        public CarDto Get(Guid id)
         {
-            return _carService.GetCarById(id).Select(car => _mapper.Map<CarDto>(car)).ToList();
+            var car = _carService.GetCarById(id);
+            return _mapper.Map<CarDto>(car);
         }
 
         // POST api/<CarController>

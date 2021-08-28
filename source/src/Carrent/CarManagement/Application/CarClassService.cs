@@ -36,7 +36,7 @@ namespace Carrent.CarManagement.Application
             return _repository.GetAllEntities();
         }
 
-        public List<CarClass> GetClassById(Guid id)
+        public CarClass GetClassById(Guid id)
         {
             return _repository.FindEntityById(id);
         }
