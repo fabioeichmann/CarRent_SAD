@@ -36,7 +36,7 @@ namespace Carrent.CarManagement.Infrastructure
 
         public void Remove(Car carEntity)
         {
-            Remove(carEntity);
+            RemoveById(carEntity.Id);
         }
 
         public void RemoveById(Guid id)
