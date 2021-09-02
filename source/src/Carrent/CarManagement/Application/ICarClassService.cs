@@ -12,7 +12,7 @@ namespace Carrent.CarManagement.Application
         CarClass GetClassById(Guid id);
         void Add(CarClass carClass);
         void Delete(CarClass carClass);
-        void DeleteById(Guid id);
+        void DeleteClassById(Guid id);
         void Update(CarClass carClass);
     }
 }

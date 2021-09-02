@@ -17,11 +17,9 @@ namespace Carrent.CustomerManagement.Controllers
     public class CustomerController : ControllerBase
     {
 
-        public readonly IMapper _mapper;
         public readonly ICustomerService _customerService;
-        CustomerController(IMapper mapper, ICustomerService customerService)
+        CustomerController( ICustomerService customerService)
         {
-            _mapper = mapper;
             _customerService = customerService;
         }
 

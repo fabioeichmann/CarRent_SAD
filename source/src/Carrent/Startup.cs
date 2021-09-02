@@ -1,3 +1,4 @@
+using AutoMapper;
 using Carrent.CarManagement.Application;
 using Carrent.CarManagement.Infrastructure;
 using Carrent.CarManagement.Infrastructure.Context;
@@ -50,6 +51,8 @@ namespace Carrent
 
             services.AddTransient<IReservationService, ReservationService>();
             services.AddScoped<IReservationRepository, ReservationRepository>();
+
+            
 
 
             services.AddControllers();

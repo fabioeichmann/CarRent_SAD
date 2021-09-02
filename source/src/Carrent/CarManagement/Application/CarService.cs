@@ -26,7 +26,7 @@ namespace Carrent.CarManagement.Application
             _repository.Remove(car);
         }
 
-        public void DeleteById(Guid id)
+        public void DeleteCarById(Guid id)
         {
             _repository.RemoveById(id);
         }

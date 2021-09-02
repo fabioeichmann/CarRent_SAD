@@ -21,15 +21,22 @@ namespace Carrent.CarManagement.Controllers
 
         public CarController(ICarService carService, ICarClassService carClassService)
         {
-            _mapper = mapper;
             _carService = carService;
+            _carClassService = carClassService;
         }
 
         // GET: api/<CarController>
         [HttpGet]
         public List<CarDto> Get()
         {
-            return _carService.GetAllCars().Select(car => _mapper.Map<CarDto>(car)).ToList();
+            return _carService.GetAllCars().Select(car => new CarDto()
+            {
+                Make = car.Make,
+                ClassId = car.ClassId,
+                Class = car.Class,
+                Id = car.Id,
+                Type = car.Type
+            }).ToList();
         }
 
         // GET api/<CarController>/5
@@ -37,14 +44,27 @@ namespace Carrent.CarManagement.Controllers
         public CarDto Get(Guid id)
         {
             var car = _carService.GetCarById(id);
-            return _mapper.Map<CarDto>(car);
+            return new CarDto()
+            {
+                Make = car.Make,
+                ClassId = car.ClassId,
+                Id = car.Id
+            };
         }
 
         // POST api/<CarController>
         [HttpPost]
         public void Post([FromBody] CarDto carDto)
         {
-            var car = _mapper.Map<Car>(carDto);
+            var car = new Car()
+            {
+                Id = Guid.NewGuid(),
+                ClassId = carDto.ClassId,
+                Make = carDto.Make,
+                Type = carDto.Type,
+            };
+
+            car.Class = _carClassService.GetClassById(carDto.ClassId);
             _carService.Add(car);
         }
 
@@ -52,15 +72,21 @@ namespace Carrent.CarManagement.Controllers
         [HttpPut("{id}")]
         public void Put(Guid id, [FromBody] CarDto carDto)
         {
-            var car = _mapper.Map<Car>(carDto);
-            _carService.Update(car);
+            var car = _carService.GetCarById(id);
+            if (car != null)
+            {
+                car.Make = carDto.Make;
+                car.ClassId = id;
+                car.Type = carDto.Type;
+                _carService.Update(car);
+            }
         }
 
         // DELETE api/<CarController>/5
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            _carService.DeleteById(id);
+            _carService.DeleteCarById(id);
         }
     }
 }

@@ -17,11 +17,9 @@ namespace Carrent.CarManagement.Controllers
     public class CarClassController : ControllerBase
     {
         private readonly ICarClassService _carClassService;
-        private readonly IMapper _mapper;
 
-        public CarClassController(IMapper mapper, ICarClassService carClassService)
+        public CarClassController(ICarClassService carClassService)
         {
-            _mapper = mapper;
             _carClassService = carClassService;
         }
 
@@ -30,7 +28,12 @@ namespace Carrent.CarManagement.Controllers
         public List<CarClassDto> Get()
         {
             var carClass = _carClassService.GetAllClasses();
-            return carClass.Select(carClass => _mapper.Map<CarClassDto>(carClass)).ToList();
+            return carClass.Select(carClass => new CarClassDto()
+            {
+                Type = carClass.Type,
+                Id = carClass.Id,
+                DailyPrice = carClass.DailyPrice
+            }).ToList();
         }
 
         // GET api/<CarClassController>/5
@@ -38,14 +41,29 @@ namespace Carrent.CarManagement.Controllers
         public CarClassDto GetById(Guid id)
         {
             var carClass = _carClassService.GetClassById(id);
-            return _mapper.Map<CarClassDto>(carClass);
+            if (carClass != null)
+            {
+                return new CarClassDto()
+                {
+                    Id = carClass.Id,
+                    Type = carClass.Type,
+                    DailyPrice = carClass.DailyPrice
+                };
+            }
+            return new CarClassDto();
         }
 
         // POST api/<CarClassController>
         [HttpPost]
         public void Post([FromBody] CarClassDto carClassDto)
         {
-            var carClass = _mapper.Map<CarClass>(carClassDto);
+            var carClass = new CarClass()
+            {
+                Id = carClassDto.Id,
+                Type = carClassDto.Type,
+                DailyPrice = carClassDto.DailyPrice
+            };
+
             _carClassService.Add(carClass);
         }
 
@@ -53,8 +71,15 @@ namespace Carrent.CarManagement.Controllers
         [HttpPut("{id}")]
         public void Put(Guid id, [FromBody] CarClassDto carClassDto)
         {
-            var carClass = _mapper.Map<CarClass>(carClassDto);
-            _carClassService.Update(carClass);
+            var carClass = _carClassService.GetClassById(id);
+            if (carClass != null)
+            {
+                carClass.Id = carClassDto.Id;
+                carClass.Type = carClassDto.Type;
+                carClass.DailyPrice = carClassDto.DailyPrice;
+
+                _carClassService.Add(carClass);
+            }
         }
 
         // DELETE api/<CarClassController>/5
@@ -64,7 +89,7 @@ namespace Carrent.CarManagement.Controllers
             var carClass = _carClassService.GetClassById(id);
             if (carClass != null)
             {
-                _carClassService.DeleteById(id);
+                _carClassService.DeleteClassById(id);
             }
         }
     }
