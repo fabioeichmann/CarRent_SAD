@@ -9,6 +9,8 @@ c) Es soll zuerst ein Monolith erstellt werden und später auf eine Micro Servic
 Optional:
 d) Der Web-Client benutzt die REST API um die Funktionen auszuführen.
 
+![System_Context](..\diagrams\images\System_Context.png)
+
 #### Anforderungen
 
 | Nr.  | Anforderungen                                                |
@@ -36,7 +38,7 @@ d) Der Web-Client benutzt die REST API um die Funktionen auszuführen.
 | Kunde          | Person2        | Einfache und schnelle Möglichkeit ein Auto zu mieten |
 | Entwickler     | Fabio Eichmann | Entwicklung des Systems                              |
 
-![image-20210630183009728](C:\Users\f.eichmann\AppData\Roaming\Typora\typora-user-images\image-20210630183009728.png)
+
 
 ## Containers
 
@@ -46,5 +48,26 @@ Die folgenden technischen Einschränkungen müssen beim Projekt berücksichtigt 
 - Die Anwendung muss das Repository Pattern verwenden
 - Die Business Logik soll auf dem Backend laufen und REST APIs anbieten
 
+![Container](..\diagrams\images\Container.jpg)
 
+## Component
 
+![Component](..\diagrams\images\Component.jpg)
+
+## Domain Model
+
+![Domain Model](..\diagrams\images\Domain Model.jpg)
+
+## 4+1 Views
+
+### Deployment View
+
+![Untitled Diagram](..\diagrams\images\Untitled Diagram.jpg)
+
+### Logical View
+
+![Logical View](..\diagrams\images\Logical View.jpg)
+
+### Implementation View
+
+![Implementation View](..\diagrams\images\Implementation View.jpg)
