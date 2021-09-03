@@ -9,7 +9,7 @@ c) Es soll zuerst ein Monolith erstellt werden und später auf eine Micro Servic
 Optional:
 d) Der Web-Client benutzt die REST API um die Funktionen auszuführen.
 
-![System_Context](\diagrams\images\System_Context.png)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/cd8afdc45a46d8f962c2ffcf1a1786c6705fdc67/docs/diagrams/images/System_Context.png" />
 
 #### Anforderungen
 
