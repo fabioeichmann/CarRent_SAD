@@ -48,26 +48,26 @@ Die folgenden technischen Einschränkungen müssen beim Projekt berücksichtigt 
 - Die Anwendung muss das Repository Pattern verwenden
 - Die Business Logik soll auf dem Backend laufen und REST APIs anbieten
 
-![Container](\diagrams\images\Container.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Container.jpg" />
 
 ## Component
 
-![Component](\diagrams\images\Component.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Component.jpg" />
 
 ## Domain Model
 
-![Domain Model](\diagrams\images\Domain Model.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Domain%20Model.jpg" />
 
 ## 4+1 Views
 
 ### Deployment View
 
-![Untitled Diagram](\diagrams\images\Untitled Diagram.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Untitled%20Diagram.jpg" />
 
 ### Logical View
 
-![Logical View](\diagrams\images\Logical View.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Logical%20View.jpg" />
 
 ### Implementation View
 
-![Implementation View](\diagrams\images\Implementation View.jpg)
+<img src="https://github.com/fabioeichmann/CarRent_SAD/blob/c59ba10d4c1d5da598b5f4d972f04df4f99f22cf/docs/diagrams/images/Implementation%20View.jpg"/>
