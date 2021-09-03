@@ -1,1 +1,107 @@
-<mxfile host="app.diagrams.net" modified="2021-09-03T19:31:13.296Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" version="14.8.3" etag="OsHJWFGCIfeNt19ABRYQ" type="github"><diagram id="TNN-Bvtz4m_AgJfniXb4">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-09-03T19:42:11.645Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="2nu3rzAMmuGFt04Gpwf2" version="14.8.3" type="github">
+  <diagram id="TNN-Bvtz4m_AgJfniXb4" name="Page-1">
+    <mxGraphModel dx="1209" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2pALBRT6IJjaqz2ON44m-1" value="Component CarRent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;labelPosition=left;verticalLabelPosition=bottom;align=right;verticalAlign=top;spacingLeft=0;labelBorderColor=none;spacingRight=-80;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="650" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-2" target="2pALBRT6IJjaqz2ON44m-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-2" target="2pALBRT6IJjaqz2ON44m-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-2" target="2pALBRT6IJjaqz2ON44m-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-15" value="&lt;div&gt;Execute API Calls&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=right;labelPosition=left;verticalLabelPosition=top;verticalAlign=bottom;spacingRight=56;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-2" target="2pALBRT6IJjaqz2ON44m-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-2" value="IIS Windows&lt;br&gt;[Container: Webserver]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="120" y="30" width="650" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-3" target="2pALBRT6IJjaqz2ON44m-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-3" value="&lt;span&gt;CarClass Controller&lt;/span&gt;&lt;br&gt;&lt;span&gt;[Component: API]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="450" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-4" target="2pALBRT6IJjaqz2ON44m-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-4" value="&lt;span&gt;Car Controller&lt;/span&gt;&lt;br&gt;&lt;span&gt;[Component: API]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="310" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-5" target="2pALBRT6IJjaqz2ON44m-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-5" value="Customer Controller&lt;br&gt;[Component: API]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-6" target="2pALBRT6IJjaqz2ON44m-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-6" value="&lt;span&gt;Reservation Controller&lt;/span&gt;&lt;br&gt;&lt;span&gt;[Component: API]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-26" value="Read/Write Operations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;labelPosition=left;verticalLabelPosition=top;align=right;verticalAlign=bottom;spacingRight=43;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-7" target="2pALBRT6IJjaqz2ON44m-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="350" />
+              <mxPoint x="445" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-7" value="Reservation Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-8" target="2pALBRT6IJjaqz2ON44m-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="350" />
+              <mxPoint x="445" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-8" value="CarClass Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="450" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-9" target="2pALBRT6IJjaqz2ON44m-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="350" />
+              <mxPoint x="445" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-9" value="Car Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="310" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-10" target="2pALBRT6IJjaqz2ON44m-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="350" />
+              <mxPoint x="445" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-10" value="Customer Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="160" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2pALBRT6IJjaqz2ON44m-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-11" value="EF Core&lt;br&gt;[Component: EF MSSQL Provider]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="282.5" y="400" width="325" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2pALBRT6IJjaqz2ON44m-28" value="Database&lt;br&gt;[Container: SQL]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="382.5" y="610" width="125" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
