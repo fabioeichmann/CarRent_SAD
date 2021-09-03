@@ -9,7 +9,7 @@ c) Es soll zuerst ein Monolith erstellt werden und später auf eine Micro Servic
 Optional:
 d) Der Web-Client benutzt die REST API um die Funktionen auszuführen.
 
-![System_Context](..\diagrams\images\System_Context.png)
+![System_Context](\diagrams\images\System_Context.png)
 
 #### Anforderungen
 
@@ -48,26 +48,26 @@ Die folgenden technischen Einschränkungen müssen beim Projekt berücksichtigt 
 - Die Anwendung muss das Repository Pattern verwenden
 - Die Business Logik soll auf dem Backend laufen und REST APIs anbieten
 
-![Container](..\diagrams\images\Container.jpg)
+![Container](\diagrams\images\Container.jpg)
 
 ## Component
 
-![Component](..\diagrams\images\Component.jpg)
+![Component](\diagrams\images\Component.jpg)
 
 ## Domain Model
 
-![Domain Model](..\diagrams\images\Domain Model.jpg)
+![Domain Model](\diagrams\images\Domain Model.jpg)
 
 ## 4+1 Views
 
 ### Deployment View
 
-![Untitled Diagram](..\diagrams\images\Untitled Diagram.jpg)
+![Untitled Diagram](\diagrams\images\Untitled Diagram.jpg)
 
 ### Logical View
 
-![Logical View](..\diagrams\images\Logical View.jpg)
+![Logical View](\diagrams\images\Logical View.jpg)
 
 ### Implementation View
 
-![Implementation View](..\diagrams\images\Implementation View.jpg)
+![Implementation View](\diagrams\images\Implementation View.jpg)
